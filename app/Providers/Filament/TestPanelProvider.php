@@ -6,6 +6,7 @@ use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\MenuItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -27,6 +28,27 @@ class TestPanelProvider extends PanelProvider
             ->id('test')
             ->path('test')
             ->login()
+
+
+            ->spa()
+            ->userMenuItems(
+                [
+                    MenuItem::make()
+                        ->label(__('Home'))
+                        ->icon('heroicon-o-clipboard')
+                        //route('home')
+                        ->url('/'),
+                    MenuItem::make()
+                        ->label(__('Dashboard'))
+                        ->icon('heroicon-o-clipboard-document-list')
+                        //route('dashboard')
+                        ->url('/dashboard'),
+
+                ]
+
+            )
+
+
             ->colors([
                 'primary' => Color::Amber,
             ])
