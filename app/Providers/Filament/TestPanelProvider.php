@@ -43,6 +43,11 @@ class TestPanelProvider extends PanelProvider
                         ->icon('heroicon-o-clipboard-document-list')
                         //route('dashboard')
                         ->url('/dashboard'),
+                    MenuItem::make()
+                        ->label(__('Test'))
+                        ->icon('heroicon-o-clipboard-document-list')
+                        //route('dashboard')
+                        ->url('/test'),
 
                 ]
 
