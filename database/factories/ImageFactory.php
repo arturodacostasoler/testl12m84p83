@@ -18,7 +18,8 @@ class ImageFactory extends Factory
     {
         return [
             //
-            'url' => $this->faker->imageUrl(1024, 1024),
+            // 'url' => $this->faker->imageUrl(1024, 1024),
+            'url' => 'https://picsum.photos/1024/1024',
         ];
     }
 }

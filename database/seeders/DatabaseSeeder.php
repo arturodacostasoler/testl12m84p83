@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
         Level::factory()->create(['name' => 'Bronce']);
 
         User::factory()->create([
-            // 'level' => 'Oro',
+            'level_id' => null,
             'name' => 'test',
             'email' => 'test@test.test',
             'password' => Hash::make('test'),
@@ -52,7 +52,7 @@ class DatabaseSeeder extends Seeder
             $user->groups()->attach($this->array(rand(1, 3)));
 
             $user->image()->save(Image::factory()->make([
-                'url' => 'https://lorempixel.com/90/90/'
+                'url' => 'https://picsum.photos/90/90'
             ]));
         });
 
@@ -80,7 +80,7 @@ class DatabaseSeeder extends Seeder
             $user->groups()->attach($this->array(rand(1, 3)));
 
             $user->image()->save(Image::factory()->make([
-                'url' => 'https://lorempixel.com/90/90/'
+                'url' => 'https://picsum.photos/90/90'
             ]));
         });
 
