@@ -15,11 +15,15 @@ class Tag extends Model
 
     public function posts(): MorphToMany
     {
-        return $this->morphedByMany(Post::class, 'taggable');
+        return $this->morphedByMany(Post::class, 'taggable')
+            // ->withTimestamps()
+        ;
     }
 
     public function videos(): MorphToMany
     {
-        return $this->morphedByMany(Video::class, 'taggable');
+        return $this->morphedByMany(Video::class, 'taggable')
+            // ->withTimestamps()
+        ;
     }
 }

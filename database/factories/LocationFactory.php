@@ -18,6 +18,7 @@ class LocationFactory extends Factory
     {
         return [
             //
+            'country' => $this->faker->country(),
         ];
     }
 }

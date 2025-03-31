@@ -18,6 +18,7 @@ class GroupFactory extends Factory
     {
         return [
             //
+            'name' => $this->faker->word(),
         ];
     }
 }

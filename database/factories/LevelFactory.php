@@ -18,6 +18,7 @@ class LevelFactory extends Factory
     {
         return [
             //
+            // 'name' => $this->faker->word(),
         ];
     }
 }

@@ -18,6 +18,9 @@ class VideoFactory extends Factory
     {
         return [
             //
+            'name' => $this->faker->sentence(),
+            'category_id' => $this->faker->randomFloat(0, 1, 4),
+            'user_id' => $this->faker->randomFloat(0, 1, 5),
         ];
     }
 }

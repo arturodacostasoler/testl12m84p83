@@ -18,6 +18,10 @@ class ProfileFactory extends Factory
     {
         return [
             //
+            'name' => $this->faker->word(),
+            'instagram' => $this->faker->userName(),
+            'github' => $this->faker->userName(),
+            'web' => $this->faker->url(),
         ];
     }
 }
